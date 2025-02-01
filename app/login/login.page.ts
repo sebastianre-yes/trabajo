@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     ],
     password: [
       { type: 'required', message: 'La contraseña es obligatoria' },
-      { type: 'minlength', message: 'La contraseña debe tener al menos 8 caracteres' },
+      { type: 'minlength', message: 'La contraseña debe tener al menos 4 caracteres' },
     ],
   };
   navCtrl: any;
