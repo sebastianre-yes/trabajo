@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title-center">FootballFan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-content">
+  
+  <div class="logo-container">
+    <ion-img alt="football-logo" src="/assets/images/icono.jpeg" class="logo-img"></ion-img>
+  </div>
+
+  
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" class="login-form">
+    
+    
+    <ion-card class="input-card">
+      <ion-item>
+        <ion-input label="Email" labelPlacement="floating" formControlName="email" placeholder="Enter your email"></ion-input>
+      </ion-item>
+    </ion-card>
+
+   
+    <div *ngIf="loginForm.get('email')?.dirty">
+      <ng-container *ngFor="let error of formErrors.email">
+        <ion-label color="danger" *ngIf="loginForm.get('email')?.hasError(error.type)">
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+
+    
+    <ion-card class="input-card">
+      <ion-item>
+        <ion-input label="Password" labelPlacement="floating" type="password" formControlName="password" placeholder="Enter your password"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    
+    <div *ngIf="loginForm.get('password')?.dirty">
+      <ng-container *ngFor="let error of formErrors.password">
+        <ion-label color="danger" *ngIf="loginForm.get('password')?.hasError(error.type)">
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+
+  
+    <div class="button-container">
+      <ion-button type="submit" [disabled]="!loginForm.valid" class="submit-button">Login to Football</ion-button>
+      <ion-button (click)="goToIntro()" class="register-button">Join the Team</ion-button>
+    </div>
+  </form>
+
+ 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-avatar class="app-logo">
+      <img src="assets/images/football-logo.png" alt="FootballFan Logo"/>
+    </ion-avatar>
+  </ion-fab>
+
+  
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</ion-content>

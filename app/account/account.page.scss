@@ -1,0 +1,142 @@
+
+ion-header {
+  --background: #fbe8e7; 
+}
+
+ion-toolbar {
+  --background: #f5c6c0;
+  --color: #5b5b5b;
+}
+
+
+.home-content {
+  --background: #7cc9dc84; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #5b5b5b;
+}
+
+
+.text-center {
+  color: #5b5b5b;
+}
+
+.profile-title {
+  font-size: 1.5em;
+  color: #5b5b5b;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.image-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-post {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5c6c0; 
+}
+
+
+ion-buttons ion-menu-button {
+  --background: #ffccd5;
+  color: #5b5b5b;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ion-fab ion-fab-button {
+  --background: #3f3b3bac;
+  --color: #ffccd5;
+}
+
+
+.card-style, .card-sty {
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #e8f0fe;
+  color: #5b5b5b;
+  box-shadow: 0 4px 8px rgba(214, 214, 214, 0.36);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-style:hover, .card-sty:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-style:active, .card-sty:active {
+  transform: scale(0.98);
+}
+
+
+.card-sty {
+  background-color: #5e5e5e;
+  color: #fff;
+}
+
+
+ion-item {
+  --background: #e8f0fe;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+
+p {
+  color: #5b5b5b;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Botones */
+.style-button {
+  color: #5b5b5b;
+}
+
+
+.rounded-button {
+  border-radius: 20px;
+}
+
+
+.light-button {
+  background-color: #ffccd5;
+}
+
+
+ion-button {
+  --background: #ffccd5;
+  color: #5b5b5b;
+  transition: transform 0.1s ease-in-out;
+}
+
+ion-button:active {
+  transform: scale(0.95);
+}
+
+
+.register-button:active {
+  background-color: #e6b8b8;
+  transform: scale(0.95);
+}

@@ -1,0 +1,25 @@
+.menu-content {
+    padding: 10px;
+  }
+  
+  ion-item {
+    --inner-padding-end: 16px;
+    --inner-padding-start: 16px;
+    font-size: 16px;
+  }
+  
+  ion-item.active {
+    background-color: #4a90e2; 
+    color: white;
+  }
+  
+  .custom-close-button {
+    font-size: 24px;
+    color: #000; 
+  }
+  
+  ion-icon {
+    font-size: 20px;
+    color: #4a90e2; 
+  }
+  

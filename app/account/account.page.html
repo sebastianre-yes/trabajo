@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-center">
+      DishCovery
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button class="style-button"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+  
+ 
+  <ion-card class="profile-card" *ngIf="!isEditing">
+    <ion-card-header>
+      <ion-card-title>{{user_data.name}} {{user_data.last_name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="image-post-container">
+        <img [src]="user_data.image" class="image-post" />
+      </div>
+      <p class="username">@{{user_data.username}}</p>
+      <div class="stats">
+        <p><strong>{{user_data.followers.length}}</strong> Seguidores</p>
+        <p><strong>{{user_data.followees.length}}</strong> Seguidos</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+ 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="presentPhotoOptions()" class="style-icon">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+ 
+  <ion-card class="edit-card" *ngIf="isEditing">
+    <ion-list>
+      <ion-item class="card-sty">
+        <ion-label position="stacked">Nombre:</ion-label>
+        <ion-input [(ngModel)]="user_data.name" placeholder="Ingresa tu nombre"></ion-input>
+      </ion-item>
+
+      <ion-item class="card-sty">
+        <ion-label position="stacked">Apellido:</ion-label>
+        <ion-input [(ngModel)]="user_data.last_name" placeholder="Ingresa tu apellido"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-card-content>
+      <ion-button expand="full" class="rounded-button register-button" (click)="update()">Actualizar Perfil</ion-button>
+      <ion-button expand="full" class="rounded-button light-button" (click)="cancelEdit()">Cancelar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

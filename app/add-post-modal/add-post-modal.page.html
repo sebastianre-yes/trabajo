@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar class="toolbar-container pastel-toolbar">
+    <ion-title class="text-center">Montar Post</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content pastel-content">
+  <form [formGroup]="addPostForm" (ngSubmit)="addPost(addPostForm.value)">
+
+    
+    <ion-card class="upload-card" (click)="presentPhotoOptions()">
+      <img [src]="post_image ? post_image : 'assets/images/PlaceHolder.jpeg'" class="upload-image" />
+      <ion-label *ngIf="!post_image" class="upload-label">Haz Click En La Imagen</ion-label>
+    </ion-card>
+
+  
+    <ion-card class="style-card">
+      <ion-item>
+        <ion-label position="stacked">Descripción:</ion-label>
+        <ion-textarea
+          placeholder="Ingredientes o Nombre Del Platillo"
+          formControlName="description">
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+  
+    <div class="pastel-footer">
+      <ion-button type="submit" [disabled]="!addPostForm.valid">
+        Publicar
+      </ion-button>
+    </div>
+
+  </form>
+
+ 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-avatar class="app-logo">
+      <img src="/assets/images/5.jpeg" alt="logo de futbol"/>
+    </ion-avatar>
+  </ion-fab>
+</ion-content>

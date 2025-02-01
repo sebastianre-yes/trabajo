@@ -1,0 +1,41 @@
+.title-center {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo-img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .input-card {
+    margin-bottom: 15px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    margin-top: 20px;
+    background-color: #3880ff;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
