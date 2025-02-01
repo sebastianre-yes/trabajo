@@ -41,9 +41,9 @@ export class UserService {
         (error) => {
           console.log(error, 'error');
           if (error.status == 500) {
-            reject('Error. Por favor, intenta más tarde');
+            reject('Error. intenta más tarde');
           } else {
-            reject('Error al actualizar el usuario');
+            reject('Error al intentar actualizar el usuario');
           }
         }
       );
@@ -67,9 +67,9 @@ export class UserService {
         (error) => {
           console.log(error, 'error');
            if (error.status == 500){
-            reject('Error Porfavor intenta mas tarde');
+            reject('Error intenta mas tarde');
           }else{
-            reject('Error al seguir al usuario');
+            reject('Error al intentar  seguir al usuario');
           }
         }
       )
@@ -88,7 +88,7 @@ export class UserService {
         (error) => {
           console.log(error, 'error');
            if (error.status == 500){
-            reject('Error Porfavor intenta mas tarde');
+            reject('Error  intenta mas tarde');
           }else{
             reject('Error al dejar de seguir al usuario');
           }
