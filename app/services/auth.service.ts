@@ -34,7 +34,7 @@ export class AutenticationService {
         if (error.status == 422 ){
           reject('User o password invalid');
         } else if (error.status == 500){
-          reject('error porfavor intente mas tarde')
+          reject('error intente mas tarde')
         }else{
           reject('error al intentar iniciar sesion')
         }
@@ -68,9 +68,9 @@ register(data: any){
         if (error.status == 422){
           reject(error.error.errors);
         } else if (error.status == 500){
-          reject('Error Porfavor intenta mas tarde');
+          reject('Error intenta mas tarde');
         }else{
-          reject('Error al intentar registrarse');
+          reject('Error  registrarse');
         }
       }
     )
