@@ -22,7 +22,7 @@ export class PostService {
             (error) => {
                 console.log(error);
                 if (error.status == 500) {
-                    reject('Error. Por favor, intenta más tarde');
+                    reject('Error.  intenta más tarde');
                 } else {
                     reject('Error al subir el post');
                 }
@@ -40,9 +40,9 @@ createPost(post_data: any){
           (error) => {
               console.log(error, 'error');
               if (error.status == 500){
-                  reject('Error Porfavor intenta mas tarde');
+                  reject('Error  intenta mas tarde');
               } else {
-                  reject('Error al crear el Post');
+                  reject('Error al crear un nuevo  Post');
               }
           }
       );
